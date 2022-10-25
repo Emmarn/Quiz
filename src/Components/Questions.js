@@ -61,9 +61,10 @@ export function Questions(){
         }
         
        }
-       const restartQuiz = () => {   // kod som startar om quizen i denna funktionen
-        setscore(0);
-       window.location.reload(); // finns det bättre sätt att skriva den här logiken?
+       const restartQuiz = () => {   
+        setscore(0)
+        setshowScore(false)
+        setcurrentQuestion(0)
       };
        return (
     
@@ -71,7 +72,7 @@ export function Questions(){
                 {}
                 {showScore ? (
                     <div className='score-section'>Du fick {score} rätt av {questions.length}
-                    <button className="restart-btn" onClick={ () => restartQuiz()} >Restart</button>
+                    <button className="restart-btn" onClick={restartQuiz} >Starta om</button>
                     </div>
                 ) : (
                     <>

@@ -44,6 +44,8 @@ export function Questions(){
        const [currentQuestion, setcurrentQuestion] = useState(0);
        const [showScore, setshowScore] = useState(false);
        const [score, setscore] = useState(0);
+      
+      
        
     
        const handleAnswerbtn = (isCorrect) => {
@@ -61,7 +63,7 @@ export function Questions(){
        }
        const restartQuiz = () => {   // kod som startar om quizen i denna funktionen
         setscore(0);
-        
+       window.location.reload(false);
       };
        return (
     

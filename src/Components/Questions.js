@@ -63,7 +63,7 @@ export function Questions(){
        }
        const restartQuiz = () => {   // kod som startar om quizen i denna funktionen
         setscore(0);
-       window.location.reload(false);
+       window.location.reload(); // finns det bättre sätt att skriva den här logiken?
       };
        return (
     

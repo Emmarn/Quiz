@@ -71,7 +71,7 @@ export function Questions(){
                 {}
                 {showScore ? (
                     <div className='score-section'>Du fick {score} rätt av {questions.length}
-                    <button className="restart-btn" onClick={restartQuiz}>Restart</button>
+                    <button className="restart-btn" onClick={ () => restartQuiz()} >Restart</button>
                     </div>
                 ) : (
                     <>
